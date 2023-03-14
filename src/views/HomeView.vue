@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Solver logo" src="../assets/logo.svg" />
+    <img alt="Solver logo" src="../assets/logo-white.svg" />
     <h1>Solver Media Brand Manual title</h1>
     <p>
       Some text about the point of this manual, what you can find in here, how
@@ -8,7 +8,7 @@
       most requested things right away (like logo files, etc)
     </p>
     <video id="background-video" autoplay loop muted>
-      <source src="../assets/158e8a26-5b063943.mp4" type="video/mp4" />
+      <source src="../assets/hydrofoorpomp-bg-video.mp4" type="video/mp4" />
     </video>
   </div>
 </template>
@@ -25,7 +25,7 @@ export default {
 <style>
 .home {
   width: 100%;
-  height: 500px;
+  max-height: 500px;
 }
 
 h1 {
@@ -41,14 +41,31 @@ h1 {
 }
 
 .home img {
-  width: 80px;
-  height: 80px;
+  width: 250px;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  background: white;
   padding: 10px;
-  border-radius: 50%;
+}
+
+.home:before {
+  content: "";
+  position: absolute;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 0.8) 0%,
+    rgba(25, 25, 138, 0.1) 35%,
+    rgba(0, 212, 255, 0.5) 100%
+  );
+  border-radius: 5px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 500px;
+  z-index: -1;
 }
 
 #background-video {
@@ -60,6 +77,6 @@ h1 {
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: -1;
+  z-index: -3;
 }
 </style>
